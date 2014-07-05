@@ -1,4 +1,4 @@
 startPage
 =========
 
-Personalized Start Page
+Personalized Start Page for your browser
