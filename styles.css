@@ -49,5 +49,34 @@ a:link {
 }
 #date{
     font-size: 24;
+    font-weight: bold;
 
+}
+#linkWrapper{
+    width:700px; border:0px solid black;
+
+}
+
+#linkWrapper #innerWrapper ul li{
+    width:120px;
+    float:left;
+    line-height: 25px;
+    margin-left:-25px;
+
+}
+.title{
+
+    font-style: normal;
+    font-weight: bold;
+
+
+}
+#linkWrapper #innerWrapper{
+    float:left;
+    width: 140px;
+    border:0px solid black;
+
+}
+#search{
+    margin-top:15px;
 }
