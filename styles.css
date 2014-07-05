@@ -44,3 +44,10 @@ a:link {
     background-color: #3f83ff;
     width: 100%;
 }
+#time{
+    font-size: 96;
+}
+#date{
+    font-size: 24;
+
+}

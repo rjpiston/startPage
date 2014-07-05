@@ -5,6 +5,7 @@
     <link rel="shortcut icon" type="image/gif" href="<!--INSERT IMG URL HERE>-->" />
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script language="javascript" type="text/javascript" src="scripts.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
@@ -12,7 +13,7 @@
     <div id="topBar"></div>
     <div class="keepcentered">
 
-        <center><font size=72><div id="time"></div></font>
+        <center><div id="time"></div><span id="date"></span>
         </center>
         <p>
             <center>
@@ -85,10 +86,25 @@
 </body>
 <script>
     $(document).ready(function () {
-        $("input[id='txtSearch']").focus();
+
+        var monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"];
+        var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+        var newDate = new Date();
+        newDate.setDate(newDate.getDate() + 1);
+        $('#date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
+
+
+        $("#txtSearch").focus();
+
+
+
+
+
         $("#txtSearch").keyup(function (e) {
             if (e.keyCode == 13) {
-                var query = $("input[id='txtSearch']").val();
+                var query = $("#txtSearch").val();
                 window.location = "https://www.google.ca/search?q=" + query;
             }
         });
