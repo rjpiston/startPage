@@ -1,120 +1,118 @@
 <html>
-	<head>
-		<title>start</title>
-		<link rel="shortcut icon" type="image/gif" href="<!--INSERT IMG URL HERE>-->" />
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-		<style type="text/css">
-				body {
-			background : #ffffff;
-			background : radial-gradient(ellipse at center, #ffffff 0%, #eee 100%);
-			background : -moz-radial-gradient(#eee, #fff);
-			}
-			.keepcentered {
-			position : absolute;
-			left : 50%;
-			top : 50%;
-			width : 700px;
-			height : 300px;
-			margin-left : -350px;
-			margin-top : -150px;
-			font-weight : 100;
-			}
-			body {
-			font-family: 'Roboto', sans-serif;
-			font-style : normal;
-			color : #1f38d9; // Change this to change the color of the colored font on the page.
-			margin : 5px;
-			}
-			td, tr {
-			width: 1000px;
-			text-align: center;
-			//border:1px solid black;
-			}
-			a {
-			font-weight: 100;
-			color : #999;
-			}
-			a:hover{
-			color: black;
-			}
-			a:link {
-			text-decoration : none;
-			text-shadow: 0px 0px 0px #000;
-			}
-</style>
-	</head>
 
-	<body onload="updateClock()">
-		<div class="keepcentered">
-			<center><font size=72><div id="time"></div></font></center>
-			<p><center>
+<head>
+    <title>start</title>
+    <link rel="shortcut icon" type="image/gif" href="<!--INSERT IMG URL HERE>-->" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
 
-			<table width="100%" border="0px">
-				<tr>
-					<td>Faves</td>
-					<td>Work</td>
-					<td>Google</td>
-					<td>Reddit</td>
-					<td>Other</td>
-				</tr>
-				<tr>
-					<td><a href="http://www.Reddit.com" target="_blank">Reddit</a></td>
-					<td><a href="https://glacierdigitalcorp.basecamphq.com/" target="_blank">Basecamp</a></td>
-					<td><a href="http://calendar.google.com">Calendar</a></td>
-					<td><a href="http://www.reddit.com/r/formula1/" target="_blank">r/Formula1</a></td>
-					<td><a href="http://www.mint.com">Mint.com</a></td>
-				</tr>
-				<tr>
-					<td><a href="https://www.facebook.com" target="_blank">Facebook</a></td>
-					<td><a href="http://kronos.test.glacier-digital.com/login.html?ref=/home.html" target="_blank">Kronos - Test</a></td>
-					<td><a href="http://play.google.com/music">Music</a></td>
-					<td><a href="http://www.c9.io">c9.io</a></td>
-					<td><a href="chrome-extension://gbchcmhmhahfdphkhkmpfmihenigjmpp/main.html">Chrome RDP</a></td>
-				</tr>
-				<tr>
-					<td><a href="https://mail.google.com" target="_blank">Gmail</a></td>
-					<td><a href="https://css1.kronos.staging02.aumbry.com/login.html?ref=/home.html">Kronos - Staging</a></td>
-					<td><a href="http://www.gmail.com">GMail</a></td>
-					<td><a href="http://www.overapi.com">OverAPI</a></td>
-					<td><a href="http://www.launchpad.net">Launchpad</a></td>
-				</tr>
-				<tr>
-					<td><a href="https://mightytext.net/web6/" target="_blank">MightyText</a></td>
-					<td><a href="https://css1.kronos.staging.aumbry.com/login.html?ref=/home.html">Kronos - Prod</a></td>
-					<td><a href="http://drive.google.com">Drive</a></td>
-					<td><a href="http://www.cplusplus.com/reference/">C++</a></td>
-					<td><a href="http://www.reddit.com/r/linuxquestions">Linux QA's</a></td>
-				</tr>
-			</table>
-			<br>
+<body onload="updateClock()">
+    <div id="topBar"></div>
+    <div class="keepcentered">
 
-			<input style="padding: 10px;border-radius: 5px; text-align: center; font-size:1.5em; width:700px; margin-bottom: 20px;" />
-			<br>
-			</center>
-		</p>
-</div>
-	</body>
-	<script>
-		function updateClock()
-		{
-			Date.getMinutesTwoDigits = function()
-			{
-				var retval = now.getMinutes();
-				if (retval < 10) return ("0" + retval.toString());
-				else return retval.toString();
-			}
-			Date.getHoursModTwelve = function()
-			{
-				var retval = now.getHours();
-				retval = retval%12;
-				if (retval == 0) retval = 12;
-				return retval;
-			}
-			var now = new Date(),
-			time = Date.getHoursModTwelve() + ':' + Date.getMinutesTwoDigits();
-			document.getElementById('time').innerHTML = ["", time].join('');
-			setTimeout(updateClock, 1000);
-		}
-	</script>
+        <center><font size=72><div id="time"></div></font>
+        </center>
+        <p>
+            <center>
+
+                <table width="100%" border="0px">
+                    <tr>
+                        <td>Faves</td>
+                        <td>Work</td>
+                        <td>Google</td>
+                        <td>Reddit</td>
+                        <td>Other</td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://www.Reddit.com" target="_blank">Reddit</a>
+                        </td>
+                        <td><a href="https://glacierdigitalcorp.basecamphq.com/" target="_blank">Basecamp</a>
+                        </td>
+                        <td><a href="http://calendar.google.com">Calendar</a>
+                        </td>
+                        <td><a href="http://www.reddit.com/r/formula1/" target="_blank">r/Formula1</a>
+                        </td>
+                        <td><a href="http://www.mint.com">Mint.com</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.facebook.com" target="_blank">Facebook</a>
+                        </td>
+                        <td><a href="http://kronos.test.glacier-digital.com/login.html?ref=/home.html" target="_blank">Kronos - Test</a>
+                        </td>
+                        <td><a href="http://play.google.com/music">Music</a>
+                        </td>
+                        <td><a href="http://www.c9.io">c9.io</a>
+                        </td>
+                        <td><a href="chrome-extension://gbchcmhmhahfdphkhkmpfmihenigjmpp/main.html">Chrome RDP</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://mail.google.com" target="_blank">Gmail</a>
+                        </td>
+                        <td><a href="https://css1.kronos.staging02.aumbry.com/login.html?ref=/home.html">Kronos - Staging</a>
+                        </td>
+                        <td><a href="http://www.gmail.com">GMail</a>
+                        </td>
+                        <td><a href="http://www.overapi.com">OverAPI</a>
+                        </td>
+                        <td><a href="http://www.launchpad.net">Launchpad</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://mightytext.net/web6/" target="_blank">MightyText</a>
+                        </td>
+                        <td><a href="https://css1.kronos.staging.aumbry.com/login.html?ref=/home.html">Kronos - Prod</a>
+                        </td>
+                        <td><a href="http://drive.google.com">Drive</a>
+                        </td>
+                        <td><a href="http://www.cplusplus.com/reference/">C++</a>
+                        </td>
+                        <td><a href="http://www.reddit.com/r/linuxquestions">Linux QA's</a>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+
+                <input id="txtSearch" style="padding: 10px;border-radius: 5px; text-align: center; font-size:1.5em; width:700px; margin-bottom: 20px;" />
+                <p></p>
+                <br>
+            </center>
+        </p>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        $("input[id='txtSearch']").focus();
+        $("#txtSearch").keyup(function (e) {
+            if (e.keyCode == 13) {
+                var query = $("input[id='txtSearch']").val();
+                window.location = "https://www.google.ca/search?q=" + query;
+            }
+        });
+
+
+    });
+
+    function updateClock() {
+        Date.getMinutesTwoDigits = function () {
+            var retval = now.getMinutes();
+            if (retval < 10) return ("0" + retval.toString());
+            else return retval.toString();
+        }
+        Date.getHoursModTwelve = function () {
+            var retval = now.getHours();
+            retval = retval % 12;
+            if (retval == 0) retval = 12;
+            return retval;
+        }
+        var now = new Date(),
+            time = Date.getHoursModTwelve() + ':' + Date.getMinutesTwoDigits();
+        document.getElementById('time').innerHTML = ["", time].join('');
+        setTimeout(updateClock, 1000);
+    }
+</script>
+
 </html>
